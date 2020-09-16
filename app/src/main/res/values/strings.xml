@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Currency Daily List</string>
+    <string name="convert">Конвертировать</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enterTheAmount">Введите сумму в рублях:</string>
 </resources>
