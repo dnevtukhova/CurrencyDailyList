@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_rectangle"
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/nameCurrency"
@@ -18,7 +20,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="@id/charCode"
-        android:paddingRight="90dp"
+        android:paddingRight="120dp"
         tools:text="Австралийский доллар" />
 
     <TextView

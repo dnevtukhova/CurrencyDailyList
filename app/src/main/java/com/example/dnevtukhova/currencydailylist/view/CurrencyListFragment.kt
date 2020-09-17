@@ -17,7 +17,6 @@ import com.example.dnevtukhova.currencydailylist.api.CurrencyItem
 import com.example.dnevtukhova.currencydailylist.viewmodel.CurrencyViewModel
 import com.example.dnevtukhova.currencydailylist.viewmodel.CurrencyViewModelFactory
 import kotlinx.android.synthetic.main.fragment_currency_list.*
-import okhttp3.internal.Internal.instance
 
 class CurrencyListFragment : Fragment() {
     private lateinit var recycler: RecyclerView
@@ -43,7 +42,7 @@ class CurrencyListFragment : Fragment() {
         currencyViewModel.currency.observe(
             this.viewLifecycleOwner,
             Observer<List<CurrencyItem>> { films -> adapterCurrency.setItems(films)
-            Log.d("in fragment", films.get(0).toString())})
+            Log.d("in fragment", films[0].toString())})
 
         currencyViewModel.error.observe(
             this.viewLifecycleOwner,
@@ -74,8 +73,8 @@ class CurrencyListFragment : Fragment() {
                 FragmentConvert(),
                 FragmentConvert.TAG
             )
+            .addToBackStack(FragmentConvert.TAG)
             .commit() }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

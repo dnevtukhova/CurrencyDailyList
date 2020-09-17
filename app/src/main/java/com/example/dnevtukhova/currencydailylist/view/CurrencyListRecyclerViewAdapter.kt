@@ -1,5 +1,6 @@
 package com.example.dnevtukhova.currencydailylist.view
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,10 +41,11 @@ class CurrencyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val value: TextView = view.findViewById(R.id.currencyValue)
     private val nominal: TextView = view.findViewById(R.id.nominal)
 
+    @SuppressLint("SetTextI18n")
     fun bind(currency: CurrencyItem) {
         charCode.text = currency.charCode
         nameCurrency.text = currency.name
-        value.text = currency.value
+        value.text = " ${currency.value} руб"
         nominal.text = "номинал: ${currency.nominal.toString()}"
 
     }

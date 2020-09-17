@@ -27,10 +27,11 @@
     android:layout_height="wrap_content"
     android:text="@string/convert"
     android:layout_margin="@dimen/text_margin"
+    android:padding="@dimen/text_margin"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
-    android:background="@color/colorAccent"/>
+    android:background="@drawable/green_rectangle"/>
     <ProgressBar
         android:id="@+id/progressbar"
         style="@android:style/Widget.Material.ProgressBar.Small"
